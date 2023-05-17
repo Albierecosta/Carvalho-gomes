@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function() {
     imageNames.forEach(function(imageName) {
       
       const img = document.createElement('img');
-      img.src = '/image/' + imageName;
+      img.src = '' + imageName;
       img.alt = 'Imagem de Cachaça';
       
       
