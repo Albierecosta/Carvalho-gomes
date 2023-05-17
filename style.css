@@ -19,7 +19,7 @@ body {
   
   .content {
     padding: 80px;
-    background-image: url('/image/fundo-texturizado-de-madeira.jpg'); /* Substitua o caminho e o nome do arquivo pela sua imagem de textura de madeira */
+    background-image: url('fundo-texturizado-de-madeira.jpg'); /* Substitua o caminho e o nome do arquivo pela sua imagem de textura de madeira */
     background-size: cover;
   }
   
@@ -73,7 +73,7 @@ body {
   .cachaca-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-image: url('/image/fundo-texturizado-de-madeira.jpg'); /* Substitua o caminho e o nome do arquivo pela sua imagem de textura de madeira */
+    background-image: url('fundo-texturizado-de-madeira.jpg'); /* Substitua o caminho e o nome do arquivo pela sua imagem de textura de madeira */
     background-size: cover;
     background-position: top left; /* Ajuste a posição conforme necessário */
     justify-content: center; /* Centraliza as imagens horizontalmente */
