@@ -2,18 +2,21 @@
 <html>
 <head>
   <title>Página Principal</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="src/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 </head>
 <body>
   <div class="navbar">
     <div class="logo-container">
-      <img src="logo.png" alt="Logo da Cachaça Artesanal">
+      <img src="/image/logo.png" alt="Logo da Cachaça Artesanal">
     </div>
     <div class="nav-links">
       <a href="#">Home</a>
       <a href="#sobrenos">Sobre Nós</a>
       <a href="#produtos">Nossos Produtos</a>
       <a href="#contato">Contato</a>
+      <a href="src/login.html">Login</a>
     </div>
   </div>
   
@@ -25,18 +28,10 @@
   </div>
 
 
+
   <div class="titulo_produtos" id="produtos"><h1>Nossos Produtos</h1></div>
   <div class="content">
-    <div class="cachaca-grid">
-      <div class="cachaca-item">
-        <img src="image1.jpg" alt="Imagem de Cachaça 1">
-      </div>
-      <div class="cachaca-item">
-        <img src="image2.jpg" alt="Imagem de Cachaça 2">
-      </div>
-      <div class="cachaca-item">
-        <img src="image3.jpg" alt="Imagem de Cachaça 3">
-      </div>
+    <div class="cachaca-grid" id="cachacaGrid">
     </div>
   </div>
 
@@ -44,7 +39,7 @@
   <div class="contato" id="contato">
     <h1>Contato</h1>
     <div class="container mt-5">
-      <form action="#" method="POST">
+      <form action="javascript:void(0);" id="contactForm">
         <div>
           <label for="name">Nome:</label>
           <input type="text" id="name" name="name" required>
@@ -57,7 +52,7 @@
           <label for="phone">Telefone:</label>
           <input type="tel" id="phone" name="phone" required>
         </div>
-        <button type="submit">Enviar</button>
+        <button onclick="info_mail()" type="submit">Enviar</button>
         <h2>Informações para contato:</h2>
         <p>Telefone: +55 37 99918-7753</p>
         <p>Email: gersong@gmail.com</p>
@@ -65,12 +60,22 @@
     </div>
   </div>
   
-  
 
   <div class="footer">
-    <p>Rodapé da página.</p>
+    <p>Direitos Reservados | &copy; AC desenvolvimento<br>
+      Contato: contato@acdesenvolvimento.com | Telefone: +55 037 99130 - 9341</p>
   </div>
 
-<script src="script.js"></script>
+<script src="src/script.js"></script>
+<script src="src/contact.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  $(document).ready(function() {
+    $('#phone').inputmask({
+      mask: '(99) 9 9999-9999',
+      placeholder: '_'
+    });
+  });
+</script>
 </body>
 </html>
