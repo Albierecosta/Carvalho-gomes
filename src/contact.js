@@ -16,18 +16,21 @@ function info_mail() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     };
+    const allFieldsFilled = name !== '' && email !== '' && phone !== '';
+
 
     fetch('/contacts', requestOptions)
         .then(response => {
-            if (!response.ok) {
+            if (!response.ok || !allFieldsFilled) {
                 throw new Error('Erro ao enviar o formulário.');
             }
+
             
             Swal.fire({
                 icon: 'success',
                 title: `Obrigado, ${name}!`,
-                text: 'Seu formulário foi enviado com sucesso.',
-                timer: 3000,
+                text: 'Seu formulário foi enviado com sucesso. Em breve entraremos em contato.',
+                timer: 6000,
                 showConfirmButton: false
             });
             

@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="src/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API"></script>
 </head>
 <body>
   <div class="navbar">
@@ -35,6 +36,7 @@
     </div>
   </div>
 
+  <div id="map"></div>
 
   <div class="contato" id="contato">
     <h1>Contato</h1>
@@ -52,7 +54,7 @@
           <label for="phone">Telefone:</label>
           <input type="tel" id="phone" name="phone" required>
         </div>
-        <button onclick="info_mail()" type="submit">Enviar</button>
+        <button id='teste' onclick="info_mail()" type="submit">Enviar</button>
         <h2>Informações para contato:</h2>
         <p>Telefone: +55 37 99918-7753</p>
         <p>Email: gersong@gmail.com</p>
@@ -68,6 +70,7 @@
 
 <script src="src/script.js"></script>
 <script src="src/contact.js"></script>
+<script src="src/maps.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   $(document).ready(function() {
@@ -77,5 +80,9 @@
     });
   });
 </script>
+
+
+
+
 </body>
 </html>
